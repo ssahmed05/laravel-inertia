@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -15,10 +16,11 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/home', function () {
-    // return view('welcome');
-    return Inertia::render('Home');
-});
+
+// Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::get('/home', [HomeController::class,'index'])->name('home');
+Route::get('/about', [HomeController::class,'aboutUs'])->name('aboutus');
+Route::get('/contact', [HomeController::class,'contact'])->name('contact.show');
 
 // Auth::routes();
 

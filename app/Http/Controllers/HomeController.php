@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+
 
 class HomeController extends Controller
 {
@@ -13,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -21,8 +24,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index() {
+
+        $data['users'] = User::all('id', 'name', 'email');
+        return Inertia::render('Home', $data)->withViewData(['title' => 'User List']);
+
+    }
+    public function aboutUs()
     {
-        return view('home');
+        return Inertia::render('AboutUs')->withViewData(['title' => 'About Us']);
+    }
+    public function contact()
+    {
+        return Inertia::render('ContactUs')->withViewData(['title' => 'Contact Us']);
     }
 }

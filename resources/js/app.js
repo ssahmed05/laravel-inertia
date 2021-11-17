@@ -5,9 +5,9 @@ import { InertiaProgress } from '@inertiajs/progress'
 
 InertiaProgress.init();
 require('./bootstrap');
-const app = document.getElementById('app');
+// const app = document.getElementById('app');
+// require('./components/Root');
 
-require('./components/Root');
 createInertiaApp({
     resolve: name => require(`./Pages/${name}`),
     setup({ el, App, props }) {
