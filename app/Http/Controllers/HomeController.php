@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -26,16 +27,33 @@ class HomeController extends Controller
      */
     public function index() {
 
-        $data['users'] = User::all('id', 'name', 'email');
-        return Inertia::render('Home', $data)->withViewData(['title' => 'User List']);
+        $data['contact'] = Contact::all('id', 'name', 'email', 'phone_no', 'message');
+        return Inertia::render('Home', $data);
 
     }
     public function aboutUs()
     {
-        return Inertia::render('AboutUs')->withViewData(['title' => 'About Us']);
+        return Inertia::render('AboutUs');
     }
     public function contact()
     {
-        return Inertia::render('ContactUs')->withViewData(['title' => 'Contact Us']);
+        return Inertia::render('ContactUs');
+    }
+    public function postContact(Request $request)
+    {
+        $request->validate([
+            'name' => ['required'],
+            'email' => ['required'],
+            'phone_no' => ['required'],
+            'message' => ['required']
+        ]);
+        $contact = new Contact;
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone_no = $request->phone_no;
+        $contact->message = $request->message;
+
+        $contact->save();
+        return redirect()->route('home');
     }
 }

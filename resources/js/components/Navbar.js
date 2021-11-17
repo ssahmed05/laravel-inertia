@@ -2,6 +2,7 @@ import { InertiaLink } from '@inertiajs/inertia-react'
 import React, { Fragment } from 'react'
 
 const Navbar = () => {
+    const {url} = history.state;
     return (
         <Fragment>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -11,18 +12,16 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <InertiaLink className="nav-link" href={base_url + '/home'}>Home <span className="sr-only">(current)</span></InertiaLink>
-                    </li>
-                    <li className="nav-item">
-                        <InertiaLink className="nav-link" href={base_url + '/about'}>About Us</InertiaLink>
-                    </li>
-                    <li className="nav-item">
-                        <InertiaLink className="nav-link" href={base_url + '/contact'}>Contact Us</InertiaLink>
-                    </li>
-                    {/* <li className="nav-item">
-                        <InertiaLink className="nav-link" href="#">Pricing</InertiaLink>
-                    </li> */}
+                        <li className={ url == '/home' ? 'nav-item active' : 'nav-item'}>
+                            <InertiaLink className="nav-link" href={base_url + '/home'}>Home <span className="sr-only">(current)</span></InertiaLink>
+                        </li>
+                        <li className={ url == '/about' ? 'nav-item active' : 'nav-item'}>
+                            <InertiaLink className="nav-link" href={base_url + '/about'}>About Us</InertiaLink>
+                        </li>
+                        <li className={ url == '/contact' ? 'nav-item active' : 'nav-item'}>
+                            <InertiaLink className="nav-link" href={base_url + '/contact'}>Contact Us</InertiaLink>
+                        </li>
+
                     </ul>
                     <span className="navbar-text">
                     Navbar text with an inline element

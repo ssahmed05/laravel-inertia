@@ -1,14 +1,17 @@
-import React, { Fragment } from 'react'
+import React, { Fragment,useEffect } from 'react'
 import Navbar from '../components/Navbar'
 
-const Main = ({children}) => {
+const Main = ({title ,children}) => {
+    useEffect(() => {
+        document.title = title;
+    })
     return (
         <Fragment>
             <Navbar />
             <section className="container">
-                <div className="container">
+
                     {children}
-                </div>
+
             </section>
         </Fragment>
     )

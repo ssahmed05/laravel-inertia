@@ -3,10 +3,10 @@ import { Fragment } from 'react/cjs/react.production.min';
 import Main from '../Layouts/Main';
 
 
-const Home = ({users}) => {
+const Home = ({contact}) => {
 
     return (
-            <Main>
+            <Main title="Home page">
                 <div className="row">
                     <div className="col-md-12">
                         <table className="table">
@@ -18,11 +18,13 @@ const Home = ({users}) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {users.map(userValue =>
+                                {contact.map(userValue =>
                                     <tr key={userValue.id}>
                                         <td>{userValue.id}</td>
                                         <td>{userValue.name}</td>
                                         <td>{userValue.email}</td>
+                                        <td>{userValue.phone_no}</td>
+                                        <td>{userValue.message}</td>
                                     </tr>
                                 )}
                             </tbody>

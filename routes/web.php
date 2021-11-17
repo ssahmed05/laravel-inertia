@@ -21,6 +21,7 @@ use Inertia\Inertia;
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/about', [HomeController::class,'aboutUs'])->name('aboutus');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact.show');
+Route::post('/contact', [HomeController::class,'postContact'])->name('contact.submit');
 
 // Auth::routes();
 

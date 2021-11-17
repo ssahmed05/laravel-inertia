@@ -3,7 +3,7 @@ import Main from '../Layouts/Main'
 
 const AboutUs = () => {
     return (
-        <Main>
+        <Main title="About Us">
             <div className="row">
                 <div className="col-md-12">
 
