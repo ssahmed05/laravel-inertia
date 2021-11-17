@@ -2,13 +2,13 @@ import { Inertia } from '@inertiajs/inertia';
 import React, { useState } from 'react'
 import Main from '../Layouts/Main'
 
-const ContactUs = ({errors}) => {
+const ContactEdit = ({contact ,errors }) => {
 
     const[value, setValue] = useState({
-        name     : '',
-        email    : '',
-        phone_no : '',
-        message  : '',
+        name     : contact.name,
+        email    : contact.email,
+        phone_no : contact.phone_no,
+        message  : contact.message,
 
     });
     function handleChange(e){
@@ -24,7 +24,7 @@ const ContactUs = ({errors}) => {
         formData.append('email',value.email);
         formData.append('phone_no',value.phone_no);
         formData.append('message',value.message);
-        Inertia.post(base_url + '/contact', formData)
+        Inertia.post(base_url + '/edit-contact/' + contact.id, formData)
 
     }
 
@@ -70,4 +70,4 @@ const ContactUs = ({errors}) => {
     )
 }
 
-export default ContactUs
+export default ContactEdit

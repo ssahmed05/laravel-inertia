@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index() {
 
-        $data['contact'] = Contact::all('id', 'name', 'email', 'phone_no', 'message');
+        $data['contact']   = Contact::all('id', 'name', 'email', 'phone_no', 'message');
         return Inertia::render('Home', $data);
 
     }
@@ -35,10 +35,12 @@ class HomeController extends Controller
     {
         return Inertia::render('AboutUs');
     }
+
     public function contact()
     {
         return Inertia::render('ContactUs');
     }
+
     public function postContact(Request $request)
     {
         $request->validate([
@@ -55,5 +57,38 @@ class HomeController extends Controller
 
         $contact->save();
         return redirect()->route('home');
+    }
+
+    public function deleteContact($id){
+
+        $contact = Contact::find($id);
+        $contact->delete();
+        return redirect()->route('home');
+    }
+    public function editContact($id){
+
+        $data['contact'] = Contact::find($id);
+        return Inertia::render('ContactEdit', $data);
+
+    }
+    public function updateContact($id, Request $request){
+
+        $request->validate([
+
+            'name'     => ['required'],
+            'email'    => ['required'],
+            'phone_no' => ['required'],
+            'message'  => ['required']
+
+        ]);
+
+        $contact           = Contact::find($id);
+        $contact->name     = $request->name;
+        $contact->email    = $request->email;
+        $contact->phone_no = $request->phone_no;
+        $contact->message  = $request->message;
+        $contact->save();
+        return redirect()->route('home');
+
     }
 }
