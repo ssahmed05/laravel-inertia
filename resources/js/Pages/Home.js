@@ -1,6 +1,7 @@
 import { InertiaLink } from '@inertiajs/inertia-react';
 import React from 'react'
 import { Fragment } from 'react/cjs/react.production.min';
+import Pagination from '../components/Pagination';
 import Main from '../Layouts/Main';
 
 
@@ -15,34 +16,34 @@ const Home = ({contact}) => {
                                 Contact List
                             </div>
                             <div className="card-body">
-                                    <table className="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>Id</th>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Phone #</th>
-                                                <th>Message</th>
-                                                <th>Action</th>
+                                <table className="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone #</th>
+                                            <th>Message</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {contact.map(userValue =>
+                                            <tr key={userValue.id}>
+                                                <td>{userValue.id}</td>
+                                                <td>{userValue.name}</td>
+                                                <td>{userValue.email}</td>
+                                                <td>{userValue.phone_no}</td>
+                                                <td>{userValue.message}</td>
+                                                <td>
+                                                    <InertiaLink href={base_url + '/edit-contact/' + userValue.id} className="btn btn-sm btn-primary">Edit</InertiaLink> <InertiaLink href={base_url + '/delete-contact/' + userValue.id} className="btn btn-sm btn-danger">Delete</InertiaLink>
+
+                                                </td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            {contact.map(userValue =>
-                                                <tr key={userValue.id}>
-                                                    <td>{userValue.id}</td>
-                                                    <td>{userValue.name}</td>
-                                                    <td>{userValue.email}</td>
-                                                    <td>{userValue.phone_no}</td>
-                                                    <td>{userValue.message}</td>
-                                                    <td>
-                                                        <InertiaLink href={base_url + '/edit-contact/' + userValue.id} className="btn btn-sm btn-primary">Edit</InertiaLink> <InertiaLink method={'post'} href={base_url + '/delete-contact/' + userValue.id} className="btn btn-sm btn-danger">Delete</InertiaLink>
-
-                                                    </td>
-                                                </tr>
-                                            )}
-                                        </tbody>
-                                    </table>
-
+                                        )}
+                                    </tbody>
+                                </table>
+                                <Pagination/>
                             </div>
                         </div>
                     </div>

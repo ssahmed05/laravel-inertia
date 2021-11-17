@@ -18,6 +18,9 @@ use Inertia\Inertia;
 
 
 // Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::get('/', function(){
+    return redirect()->route('home');
+});
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/about', [HomeController::class,'aboutUs'])->name('aboutus');
 
@@ -25,7 +28,7 @@ Route::get('/contact', [HomeController::class,'contact'])->name('contact.show');
 Route::post('/contact', [HomeController::class,'postContact'])->name('contact.submit');
 Route::get('/edit-contact/{id}', [HomeController::class,'editContact'])->name('contact.edit');
 Route::post('/edit-contact/{id}', [HomeController::class,'updateContact'])->name('contact.update');
-Route::post('/delete-contact/{id}', [HomeController::class,'deleteContact'])->name('contact.delete');
+Route::get('/delete-contact/{id}', [HomeController::class,'deleteContact'])->name('contact.delete');
 
 // Auth::routes();
 

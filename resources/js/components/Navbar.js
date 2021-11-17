@@ -2,7 +2,7 @@ import { InertiaLink } from '@inertiajs/inertia-react'
 import React, { Fragment } from 'react'
 
 const Navbar = () => {
-    const {url} = history.state;
+    const {url} = history.state == null ? '/' : history.state;
     return (
         <Fragment>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
