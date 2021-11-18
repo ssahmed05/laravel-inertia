@@ -1,6 +1,6 @@
-composer install
-npm install
-npm run dev / npm run watch
-cp .env.example .env
-php artisan key:generate
-set Database and Run migrations
+- composer install <br>
+- npm install <br>
+- npm run dev / npm run watch <br>
+- cp .env.example .env <br>
+- php artisan key:generate <br>
+- set Database and Run migrations <br>
