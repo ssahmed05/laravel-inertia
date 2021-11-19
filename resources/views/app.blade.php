@@ -8,7 +8,6 @@
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <script>
         window.base_url = '{{ url('/') }}';
-
     </script>
   </head>
   <body>

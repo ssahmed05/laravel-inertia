@@ -1,7 +1,6 @@
 import { InertiaLink } from '@inertiajs/inertia-react';
 import React from 'react'
 import { Fragment } from 'react/cjs/react.production.min';
-import Pagination from '../components/Pagination';
 import Main from '../Layouts/Main';
 
 
@@ -16,7 +15,7 @@ const Home = ({contact}) => {
                                 Contact List
                             </div>
                             <div className="card-body">
-                                <table className="table table-bordered">
+                                <table className="table table-bordered datatable">
                                     <thead>
                                         <tr>
                                             <th>Id</th>
@@ -43,7 +42,7 @@ const Home = ({contact}) => {
                                         )}
                                     </tbody>
                                 </table>
-                                <Pagination/>
+
                             </div>
                         </div>
                     </div>
