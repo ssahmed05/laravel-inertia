@@ -35,6 +35,14 @@ class HomeController extends Controller
     {
         return Inertia::render('AboutUs');
     }
+    public function services()
+    {
+        return Inertia::render('Services');
+    }
+    public function contactUs() //for new Template website
+    {
+        return Inertia::render('Contact');
+    }
 
     public function contact()
     {
@@ -44,14 +52,16 @@ class HomeController extends Controller
     public function postContact(Request $request)
     {
         $request->validate([
-            'name' => ['required'],
-            'email' => ['required'],
+            'name'     => ['required'],
+            'email'    => ['required'],
+            'subject'  => ['required'],
             'phone_no' => ['required'],
-            'message' => ['required']
+            'message'  => ['required']
         ]);
         $contact = new Contact;
         $contact->name = $request->name;
         $contact->email = $request->email;
+        $contact->subject = $request->subject;
         $contact->phone_no = $request->phone_no;
         $contact->message = $request->message;
 

@@ -23,12 +23,10 @@ Route::get('/', function(){
 });
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/about', [HomeController::class,'aboutUs'])->name('aboutus');
+Route::get('/services', [HomeController::class,'services'])->name('services');
+Route::get('/contact-us', [HomeController::class,'contactUs'])->name('contact.form');
+Route::post('/contact-us', [HomeController::class,'postContact'])->name('contact.submit');
 
-Route::get('/contact', [HomeController::class,'contact'])->name('contact.show');
-Route::post('/contact', [HomeController::class,'postContact'])->name('contact.submit');
-Route::get('/edit-contact/{id}', [HomeController::class,'editContact'])->name('contact.edit');
-Route::post('/edit-contact/{id}', [HomeController::class,'updateContact'])->name('contact.update');
-Route::get('/delete-contact/{id}', [HomeController::class,'deleteContact'])->name('contact.delete');
 
 // Auth::routes();
 

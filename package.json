@@ -28,6 +28,8 @@
         "@inertiajs/inertia": "^0.10.1",
         "@inertiajs/inertia-react": "^0.7.1",
         "@inertiajs/progress": "^0.2.6",
-        "datatables.net-bs4": "^1.11.3"
+        "@react-google-maps/api": "^2.7.0",
+        "datatables.net-bs4": "^1.11.3",
+        "react-owl-carousel": "^2.3.3"
     }
 }
