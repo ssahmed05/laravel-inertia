@@ -56,9 +56,10 @@ const Navbar = ({title}) => {
                                 <li className={url == "/portfolio" ? "nav-item active" : "nav-item"}>
                                     <InertiaLink href={base_url + '/portfolio'}className="nav-link">Projects</InertiaLink>
                                 </li>
-                                <li className="nav-item">
-                                    <InertiaLink href="blog.html" className="nav-link">News</InertiaLink>
+                                <li className={url == "/Blog" ? "nav-item active" : "nav-item"}>
+                                    <InertiaLink href={base_url + '/blog'}className="nav-link">News</InertiaLink>
                                 </li>
+
                             </ul>
                         </div>
                     </div>

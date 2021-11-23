@@ -49,11 +49,6 @@ class HomeController extends Controller
         return Inertia::render('ContactUs');
     }
 
-    public function portfolio()
-    {
-        return Inertia::render('Portfolio');
-    }
-
     public function postContact(Request $request)
     {
         $request->validate([
@@ -74,36 +69,45 @@ class HomeController extends Controller
         return redirect()->route('home');
     }
 
-    public function deleteContact($id){
-
-        $contact = Contact::find($id);
-        $contact->delete();
-        return redirect()->route('home');
+    public function portfolio()
+    {
+        return Inertia::render('Portfolio');
     }
-    public function editContact($id){
-
-        $data['contact'] = Contact::find($id);
-        return Inertia::render('ContactEdit', $data);
-
+    public function blog()
+    {
+        return Inertia::render('Blog');
     }
-    public function updateContact($id, Request $request){
 
-        $request->validate([
+    // public function deleteContact($id){
 
-            'name'     => ['required'],
-            'email'    => ['required'],
-            'phone_no' => ['required'],
-            'message'  => ['required']
+    //     $contact = Contact::find($id);
+    //     $contact->delete();
+    //     return redirect()->route('home');
+    // }
+    // public function editContact($id){
 
-        ]);
+    //     $data['contact'] = Contact::find($id);
+    //     return Inertia::render('ContactEdit', $data);
 
-        $contact           = Contact::find($id);
-        $contact->name     = $request->name;
-        $contact->email    = $request->email;
-        $contact->phone_no = $request->phone_no;
-        $contact->message  = $request->message;
-        $contact->save();
-        return redirect()->route('home');
+    // }
+    // public function updateContact($id, Request $request){
 
-    }
+    //     $request->validate([
+
+    //         'name'     => ['required'],
+    //         'email'    => ['required'],
+    //         'phone_no' => ['required'],
+    //         'message'  => ['required']
+
+    //     ]);
+
+    //     $contact           = Contact::find($id);
+    //     $contact->name     = $request->name;
+    //     $contact->email    = $request->email;
+    //     $contact->phone_no = $request->phone_no;
+    //     $contact->message  = $request->message;
+    //     $contact->save();
+    //     return redirect()->route('home');
+
+    // }
 }
