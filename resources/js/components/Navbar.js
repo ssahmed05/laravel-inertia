@@ -40,21 +40,21 @@ const Navbar = ({title}) => {
 
                         <div className="navbar-collapse collapse" id="navbarContent">
                             <ul className="navbar-nav ml-auto pt-3 pt-lg-0">
-                                <li className="nav-item">
+                                <li className={url == "/home" ? "nav-item active" : "nav-item"}>
                                     <InertiaLink href={base_url + '/home'} className="nav-link">Home</InertiaLink>
                                 </li>
-                                <li className="nav-item active">
+                                <li className={url == "/about" ? "nav-item active" : "nav-item"}>
                                     <InertiaLink href={base_url + '/about'}  className="nav-link">About</InertiaLink>
                                 </li>
-                                <li className="nav-item active">
+                                <li className={url == "/services" ? "nav-item active" : "nav-item"}>
                                     <InertiaLink href={base_url + '/services'}  className="nav-link">Services</InertiaLink>
                                 </li>
-                                <li className="nav-item">
+                                <li className={url == "/contact-us" ? "nav-item active" : "nav-item"}>
                                     <InertiaLink href={base_url + '/contact-us'} className="nav-link">Contact</InertiaLink>
                                 </li>
 
-                                <li className="nav-item">
-                                    <InertiaLink href="portfolio.html" className="nav-link">Projects</InertiaLink>
+                                <li className={url == "/portfolio" ? "nav-item active" : "nav-item"}>
+                                    <InertiaLink href={base_url + '/portfolio'}className="nav-link">Projects</InertiaLink>
                                 </li>
                                 <li className="nav-item">
                                     <InertiaLink href="blog.html" className="nav-link">News</InertiaLink>

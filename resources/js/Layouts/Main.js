@@ -11,7 +11,6 @@ const Main = ({title ,children}) => {
         document.title = title;
         $('.datatable').DataTable();
 
-
     })
 
     return (

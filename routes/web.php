@@ -26,6 +26,7 @@ Route::get('/about', [HomeController::class,'aboutUs'])->name('aboutus');
 Route::get('/services', [HomeController::class,'services'])->name('services');
 Route::get('/contact-us', [HomeController::class,'contactUs'])->name('contact.form');
 Route::post('/contact-us', [HomeController::class,'postContact'])->name('contact.submit');
+Route::get('/portfolio', [HomeController::class,'portfolio'])->name('portfolio');
 
 
 // Auth::routes();

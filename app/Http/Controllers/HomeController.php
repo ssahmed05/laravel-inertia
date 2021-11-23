@@ -49,6 +49,11 @@ class HomeController extends Controller
         return Inertia::render('ContactUs');
     }
 
+    public function portfolio()
+    {
+        return Inertia::render('Portfolio');
+    }
+
     public function postContact(Request $request)
     {
         $request->validate([
