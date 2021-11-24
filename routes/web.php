@@ -29,7 +29,7 @@ Route::get('/contact-us', [HomeController::class,'contactUs'])->name('contact.fo
 Route::post('/contact-us', [HomeController::class,'postContact'])->name('contact.submit');
 Route::get('/portfolio', [HomeController::class,'portfolio'])->name('portfolio');
 Route::get('/blog', [HomeController::class,'blog'])->name('blog');
-
+Route::get('/single-blog', [HomeController::class,'singleBlog'])->name('singleBlog');
 
 // Auth::routes();
 

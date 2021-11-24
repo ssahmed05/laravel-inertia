@@ -77,6 +77,10 @@ class HomeController extends Controller
     {
         return Inertia::render('Blog');
     }
+    public function singleBlog()
+    {
+        return Inertia::render('SingleBlog');
+    }
 
     // public function deleteContact($id){
 

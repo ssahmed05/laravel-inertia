@@ -64,6 +64,7 @@ const Navbar = ({title}) => {
                         </div>
                     </div>
                 </nav>
+                {url != "/single-blog" &&
 
                 <div className="page-banner bg-img bg-img-parallax overlay-dark" style={{ backgroundImage: `url("img/bg_image_3.jpg")` }}>
                     <div className="container h-100">
@@ -80,6 +81,7 @@ const Navbar = ({title}) => {
                         </div>
                     </div>
                 </div>
+                 }
             </header>
         </Fragment>
     )

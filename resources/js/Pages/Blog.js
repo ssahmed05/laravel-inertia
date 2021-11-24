@@ -1,3 +1,4 @@
+import { InertiaLink } from '@inertiajs/inertia-react'
 import React from 'react'
 import Main from '../Layouts/Main'
 const Blog = () => {
@@ -20,11 +21,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -41,11 +42,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -62,11 +63,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -83,11 +84,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -104,11 +105,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -125,11 +126,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -146,11 +147,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -167,11 +168,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
@@ -188,11 +189,11 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <div className="body">
-                                            <div className="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                                            <div className="post-title"><InertiaLink href={base_url + "/single-blog"}>What is Business Management?</InertiaLink></div>
                                             <div className="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
                                         </div>
                                         <div className="footer">
-                                            <a href="blog-single.html">Read More <span className="mai-chevron-forward text-sm"></span></a>
+                                            <InertiaLink href={base_url + "/single-blog"}>Read More <span className="mai-chevron-forward text-sm"></span></InertiaLink>
                                         </div>
                                     </div>
                                 </div>
