@@ -1,11 +1,9 @@
 import { InertiaLink } from '@inertiajs/inertia-react';
 import React from 'react'
-import { Fragment } from 'react/cjs/react.production.min';
 import Main from '../Layouts/Main';
 
 
 const Home = ({contact}) => {
-
     return (
             <Main title="Home page">
                 <div className="row">
